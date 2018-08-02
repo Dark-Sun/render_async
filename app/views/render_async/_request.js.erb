@@ -5,7 +5,7 @@ if (window.jQuery) {
         $("#<%= container_id %>").replaceWith(response);
 
         <% if event_name.present? %>
-          document.dispatchEvent(new Event("<%= event_name %>"));
+          $(document).trigger("<%= event_name %>");
         <% end %>
       });
     });
